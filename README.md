@@ -7,7 +7,7 @@ This project builds an end-to-end data pipeline on Microsoft Azure to process, t
 ---
 
 ## Architecture Pipeline
-
+'''
 
 [ Kaggle Data Source ] 
        │
@@ -31,7 +31,7 @@ This project builds an end-to-end data pipeline on Microsoft Azure to process, t
        │
        ▼
 [ Power BI (Interactive Dashboards) ]
-
+'''[cute:1]
 
 ---
 
