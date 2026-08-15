@@ -58,21 +58,6 @@ The data model is organized into key analytical tables centered around transacti
 | **`card`** | Dimension Table | `Card_ID`, `Card_Type`, `Card_Category`, `Expiration_Date`[cite: 1] |
 | **`Date Table`** | Dimension Table | `Date`, `Year`, `Month`, `Quarter`[cite: 1] |
 
----
-
-## Repository Structure
-
-```text
-├── databricks/
-│   └── financial_fraud_data_analysis_transformation.py  # PySpark extraction & transformation script
-├── adf/
-│   └── Data-Ingestion-pipeline.json                     # Azure Data Factory pipeline configuration
-├── synapse/
-│   └── fraud_analytics_queries.sql                     # SQL analytical queries for Synapse
-├── powerbi/
-│   └── Fraud_Analytics.pbix                            # Power BI dashboard reporting file
-└── README.md                                           # Documentation
-```[cite: 1]
 
 ---
 
