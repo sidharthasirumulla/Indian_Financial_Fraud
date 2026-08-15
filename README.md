@@ -8,7 +8,7 @@ This project builds an end-to-end data pipeline on Microsoft Azure to process, t
 
 ## Architecture Pipeline
 
-```
+
 [ Kaggle Data Source ] 
        │
        ▼
@@ -91,7 +91,7 @@ The data model is organized into key analytical tables centered around transacti
 * Configure Databricks workspace `financial-fraud-data-db`[cite: 1].
 * Run notebook script `financial_fraud_data_analysis_transformation` to mount ADLS Gen2, clean data, compute aggregate metrics, and export curated datasets to `transform-data`[cite: 1].
 
-```python
+python
 # Sample Databricks Storage Mount
 configs = {
     "fs.azure.account.auth.type": "OAuth",
@@ -106,13 +106,12 @@ dbutils.fs.mount(
     mount_point = "/mnt/financial-fraud",
     extra_configs = configs
 )
-```[cite: 1]
 
 ### 4. Data Warehousing (Azure Synapse Analytics)
 * Set up Synapse workspace `financialfraud-saw` and database `FinancialDB`[cite: 1].
 * Query transactions and compute high-risk merchant metrics[cite: 1]:
 
-```sql
+sql
 SELECT 
     Merchant_ID,
     COUNT(*) AS Fraud_Count,
@@ -120,11 +119,11 @@ SELECT
 FROM transactions
 WHERE Fraud_Flag = 1
 GROUP BY Merchant_ID;
-```[cite: 1]
+
 
 ### 5. Data Visualization (Power BI)
 * Connect Power BI to Azure Synapse / ADLS Gen2[cite: 1].
 * Import star-schema relationships between `transactions` (Fact) and Dimension tables[cite: 1].
 * Build visual dashboards tracking Total Fraud Amount, Fraud vs Non-Fraud Cases, Transaction Volume by Risk Level, and State-wise Fraud Cases[cite: 1].
 
-```
+'''
